@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  web:
+    container_name: app1
+    image: docker.io/erikeverardo/isolaatti-backend-app:latest
+    restart: always
+    ports:
+      - "5000:80"
+    network_mode: "bridge"
+  web2:
+    container_name: app2
+    image: docker.io/erikeverardo/isolaatti-backend-app:latest
+    restart: always
+    ports:
+      - "4300:80"
+    network_mode: "bridge"
